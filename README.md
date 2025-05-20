@@ -61,6 +61,11 @@ src/
    ```bash
    npm run build
    ```
+5. **Package and upload dependencies** (optional):
+   Set `REMOTE_HOST` and `REMOTE_PATH` then run:
+   ```bash
+   REMOTE_HOST=user@server REMOTE_PATH=/path/to/dir ./scripts/upload-vite-deps.sh
+   ```
 
 ## 🔑 API Keys
 

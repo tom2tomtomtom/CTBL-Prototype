@@ -64,9 +64,10 @@ src/
 
 ## 🔑 API Keys
 
-* You will be prompted in-app to provide API keys for each LLM provider.
-* These are stored **locally** in your browser for the current session only.
-* Ensure you have access to the APIs for OpenAI, Claude (Anthropic), or others.
+* Use the **API Key Manager** section in the app to enter your keys for OpenAI,
+  Anthropic, or Mistral.
+* Keys are stored **locally** in your browser for the current session only.
+* Ensure you have access to the respective provider APIs.
 
 ## 🧪 Testing
 

@@ -5,6 +5,7 @@ import { ToneGenerator } from '../components/ToneGenerator'
 import { PromptBuilder } from '../components/PromptBuilder'
 import { CopyOutput } from '../components/CopyOutput'
 import { LLMSelector } from '../components/LLMSelector'
+import { ApiKeyManager } from '../components/ApiKeyManager'
 import { useStore } from '../store'
 import '../index.css'
 
@@ -17,6 +18,7 @@ const App: React.FC = () => {
       <ToneGenerator />
       <PromptBuilder />
       <LLMSelector />
+      <ApiKeyManager />
       <CopyOutput />
     </div>
   )

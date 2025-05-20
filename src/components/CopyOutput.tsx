@@ -1,13 +1,23 @@
 import React from 'react'
 import { useStore } from '../store'
 import { openaiCompletion } from '../lib/llmAdapters/openai'
+import { anthropicCompletion } from '../lib/llmAdapters/anthropic'
+import { mistralCompletion } from '../lib/llmAdapters/mistral'
 
 export const CopyOutput: React.FC = () => {
   const prompt = useStore(s => s.prompt)
+  const provider = useStore(s => s.provider)
   const [output, setOutput] = React.useState('')
 
   const handleRun = async () => {
-    const res = await openaiCompletion(prompt)
+    let res = ''
+    if (provider === 'openai') {
+      res = await openaiCompletion(prompt)
+    } else if (provider === 'anthropic') {
+      res = await anthropicCompletion(prompt)
+    } else {
+      res = await mistralCompletion(prompt)
+    }
     setOutput(res)
   }
 
